@@ -4,7 +4,7 @@
     <!-- Abrir Formulario Login -->
     <div id="id01" class="modal">
 
-        <form class="modal-content animate" action="/action_page.php" method="post">
+        <form id="login-form" class="modal-content animate" action="/action_page.php" method="post">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
@@ -13,10 +13,10 @@
 
             <div class="container">
                 <label for="uname"><b>Usuario</b></label>
-                <input type="text" placeholder="Digite seu usário" name="uname" required>
+                <input id="username" type="text" placeholder="Digite seu usuário" name="uname" required>
 
                 <label for="psw"><b>Senha</b></label>
-                <input type="password" placeholder="Digite sua senha" name="psw" required>
+                <input id="password" type="password" placeholder="Digite sua senha" name="psw" required>
                 <input type="radio" name="id" value="vendendor"> Fornecedor<br>
                 <input type="radio" name="id" value="comprador"> Comprador <br>
                 <button type="submit">Login</button>
@@ -26,7 +26,7 @@
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                <button type="button" onclick="login()"
                     class="cancelbtn">Cancelar</button>
                 <span class="psw"><a href="#">Esqueceu sua senha?</a></span>
             </div>

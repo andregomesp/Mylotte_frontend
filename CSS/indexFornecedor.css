@@ -75,7 +75,6 @@ body {
   outline-style: none;
 }
 
-}
 .searchBarDiv {
   background-color: white;
   width: 38%;
@@ -257,7 +256,7 @@ button:hover {
 
 img.avatar {
   width: 10%;
-  height: 1 0%
+  height: 1 0%;
   border-radius: 50%;
 }
 

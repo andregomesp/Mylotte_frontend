@@ -22,9 +22,9 @@ body {
   background-color: white;
   width: 245px;
   height: 128px;
-  position: absolute;
   display: inline-flex;
-  margin-top: -132px;
+  float:left;
+  margin-top:0.4em;
 }
 
 .logo {
@@ -41,10 +41,9 @@ body {
   background-color: white;
   width: 70%;
   height: 70px;
-  position: absolute;
   display: inline-flex;
-  margin-top: -110px;
-  margin-left: 280px;
+  float:left;
+  margin-top: 1.4em;
 }
 
 .search {
@@ -128,12 +127,8 @@ transform: translateX(-3px);
 .aboutdiv {
 
   background-color: white;
-  width: 100px;
-  height: 90px;
-  position: absolute;
-  margin-top: -116px;
-  margin-left: 1800px;
-
+  position: relative;
+  float: right;
 }
 
 .aboutBtn {
@@ -142,7 +137,7 @@ color: yellow;
 background-color: #292D3E;
 border: 1px solid #1D9AF2;
 border-radius: 4px;
-margin-top: 14px;
+margin: 0;
 padding: 0 15px;
 cursor: pointer;
 height: 59px;
@@ -208,7 +203,7 @@ button:hover {
 
 img.avatar {
   width: 10%;
-  height: 1 0%
+  height: 1 0%;
   border-radius: 50%;
 }
 

@@ -1,5 +1,5 @@
-function invokeHtml(idParent) {
-    fetch("./login/login.html")
+function invokeHtml(idParent, file_url) {
+    fetch(file_url)
     .then(response => response.text())
     .then(text => {
         let parent = document.getElementById(idParent);
