@@ -28,7 +28,7 @@ body {
 
 .logo {
 
-  width: 235px;
+  width: 13em;
   height: 190px;
   position: absolute;
   display: inline-flex;
@@ -523,12 +523,11 @@ li a:hover {
 
 
  .step1 {
-     margin-top: 120px;
-     margin-left: 325px;
-     height: 270px;
-     width: 505px;
-     background-color: #000000;
-     position: absolute;
+    margin-top: 120px;
+    margin-left: 325px;
+    height: 270px;
+    width: 25em;
+    background-color: #000000;
  }
 
  .step1:hover{
@@ -543,7 +542,7 @@ li a:hover {
      position: relative;
      margin-top: -360px;
      margin-left: 325px;
-     width: 505px;
+     width: 25em;
      height: 58px;
      background: rgb(202, 202, 202);
      background: rgba(255, 255, 255, 0.9);
