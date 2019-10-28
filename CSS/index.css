@@ -5,9 +5,8 @@ body {
 }
 
 .divTop {
-      margin-top: -10px;
-      margin-left: -5px;
       background-color: white;
+      display: flex;
       width: 100%px;
       height: 140px;
       border-bottom:0.25px solid #5f5f5f;
@@ -22,14 +21,14 @@ body {
   background-color: white;
   width: 245px;
   height: 128px;
-  position: absolute;
   display: inline-flex;
-  margin-top: -132px;
+  float:left;
+  margin-top:0.4em;
 }
 
 .logo {
 
-  width: 235px;
+  width: 13em;
   height: 190px;
   position: absolute;
   display: inline-flex;
@@ -41,10 +40,9 @@ body {
   background-color: white;
   width: 70%;
   height: 70px;
-  position: absolute;
   display: inline-flex;
-  margin-top: -110px;
-  margin-left: 280px;
+  float:left;
+  margin-top: 2.5em;
 }
 
 .search {
@@ -69,13 +67,12 @@ body {
 
   margin-top: 8px;
   align-self: auto;
-  margin-left: 993px;
+  margin-left: -3em;
   width: 350px;
   height: 55px;
   border: .3px solid gold;
   border-radius: 4px 32px 32px 4px;
   background-color: gold;
-  position: absolute;
   z-index: 1;
   color: gold;
   cursor: pointer;
@@ -94,24 +91,15 @@ body {
   color: white;
 }
 
-.loginDiv {
-
-  background-color: white;
-  width: 180px;
-  height: 90px;
-  position: absolute;
-  margin-top: -116px;
-  margin-left: 1650px;
-
-}
 
 .loginBtn  {
-
 color: yellow;
 background-color: #292D3E;
 border: 1px solid #1D9AF2;
 border-radius: 4px;
-margin-top: 15px;
+margin-top: 2em;
+margin-left: 1.5em;
+margin-right: 2em;
 padding: 0 15px;
 cursor: pointer;
 height: 59px;
@@ -128,9 +116,6 @@ transform: translateX(-3px);
 }
 
 .loginIcon {
-    margin-top: 27px;
-    position: absolute;
-    margin-left: -141px;
     height: 37px;
     width: 37px;
 }
@@ -138,12 +123,7 @@ transform: translateX(-3px);
 .aboutdiv {
 
   background-color: white;
-  width: 100px;
-  height: 90px;
-  position: absolute;
-  margin-top: -116px;
-  margin-left: 1800px;
-
+  position: relative;
 }
 
 .aboutBtn {
@@ -152,7 +132,8 @@ color: yellow;
 background-color: #292D3E;
 border: 1px solid #1D9AF2;
 border-radius: 4px;
-margin-top: 14px;
+margin-top: 2em;
+margin-right: 1em;
 padding: 0 15px;
 cursor: pointer;
 height: 59px;
@@ -218,7 +199,7 @@ button:hover {
 
 img.avatar {
   width: 10%;
-  height: 1 0%
+  height: 1 0%;
   border-radius: 50%;
 }
 
@@ -542,12 +523,11 @@ li a:hover {
 
 
  .step1 {
-     margin-top: 120px;
-     margin-left: 325px;
-     height: 270px;
-     width: 505px;
-     background-color: #000000;
-     position: absolute;
+    margin-top: 120px;
+    margin-left: 325px;
+    height: 270px;
+    width: 25em;
+    background-color: #000000;
  }
 
  .step1:hover{
@@ -562,7 +542,7 @@ li a:hover {
      position: relative;
      margin-top: -360px;
      margin-left: 325px;
-     width: 505px;
+     width: 25em;
      height: 58px;
      background: rgb(202, 202, 202);
      background: rgba(255, 255, 255, 0.9);

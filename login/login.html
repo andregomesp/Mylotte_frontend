@@ -1,0 +1,37 @@
+<div class="loginDiv">
+    <script src="./login/login.js" type="text/javascript"></script>
+    <button class="loginBtn" onclick="document.getElementById('id01').style.display='block'"> 
+        <img class="loginIcon" src="./Projeto Estagio II - Lotes/imagens/yellowIcon.png">
+        Login 
+    </button>
+
+    <!-- Abrir Formulario Login -->
+    <div id="id01" class="modal">
+        <form id="login-form" class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="./Projeto Estagio II - Lotes/imagens/lotteLogo.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Usuario</b></label>
+                <input id="username" type="text" placeholder="Digite seu usuário" name="username" required>
+
+                <label for="psw"><b>Senha</b></label>
+                <input id="password" type="password" placeholder="Digite sua senha" name="password" required>
+                <input type="radio" name="id" value="vendendor"> Fornecedor<br>
+                <input type="radio" name="id" value="comprador"> Comprador <br>
+                <button type="button" onclick="login()">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Lembrar-se de mim
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button"
+                    class="cancelbtn" onclick="document.getElementById('id01').style.display='none'">Cancelar</button>
+                <span class="psw"><a href="#">Esqueceu sua senha?</a></span>
+            </div>
+        </form>
+    </div>
