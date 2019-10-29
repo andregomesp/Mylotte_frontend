@@ -1,12 +1,19 @@
-function invokeHtml(idParent, file_url) {
+function invokeHtml(idParent, file_url, ...args) {
+    console.log(args);
     fetch(file_url)
     .then(response => response.text())
     .then(text => {
+        for (let i = 0; i < args.length; i++) {
+            let inputProps = "inputProps" + (i+1).toString();
+            console.log(inputProps);
+            console.log(text);
+            text = text.replace(inputProps, args[i]);
+        }
         let parent = document.getElementById(idParent);
         let template = document.createElement("div");
         template.innerHTML = text.trim();
         let scripts = template.getElementsByTagName("script");
-        for (i = 0; i < scripts.length; i++) {
+        for (let i = 0; i < scripts.length; i++) {
             let script = scripts[i];
             let new_script = document.createElement("script");
             new_script.src = script.src;

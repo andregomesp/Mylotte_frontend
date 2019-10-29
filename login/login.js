@@ -17,8 +17,8 @@ function login() {
         if (response.ok) {
             response.json()
             .then(json => {
-                localStorage.setItem(mylotte_token, json.access_token);
-                localStorage.setItem(mylotte_username, json.username);
+                localStorage.setItem("mylotte_token", json.access_token);
+                localStorage.setItem("mylotte_username", json.username);
                 document.getElementById('id01').style.display='none';
                 document.getElementById('login-button-placeholder').remove();
             })
@@ -26,7 +26,6 @@ function login() {
     })
     .then(json => {
         console.log(json);
-        
     })
     .catch(err => {
         console.log(err);
