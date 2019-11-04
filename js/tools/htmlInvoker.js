@@ -1,12 +1,9 @@
 function invokeHtml(idParent, file_url, ...args) {
-    console.log(args);
     fetch(file_url)
     .then(response => response.text())
     .then(text => {
         for (let i = 0; i < args.length; i++) {
             let inputProps = "inputProps" + (i+1).toString();
-            console.log(inputProps);
-            console.log(text);
             text = text.replace(inputProps, args[i]);
         }
         let parent = document.getElementById(idParent);

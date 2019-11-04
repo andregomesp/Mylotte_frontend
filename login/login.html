@@ -1,15 +1,15 @@
 <div class="loginDiv">
     <script src="./login/login.js" type="text/javascript"></script>
-    <button class="loginBtn" onclick="document.getElementById('id01').style.display='block'"> 
+    <button class="loginBtn" onclick="document.getElementById('login-form-wrapper').style.display='block'"> 
         <img class="loginIcon" src="./Projeto Estagio II - Lotes/imagens/yellowIcon.png">
         Login 
     </button>
 
     <!-- Abrir Formulario Login -->
-    <div id="id01" class="modal">
+    <div id="login-form-wrapper" class="modal">
         <form id="login-form" class="modal-content animate">
             <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                <span onclick="document.getElementById('login-form-wrapper').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
                 <img src="./Projeto Estagio II - Lotes/imagens/lotteLogo.png" alt="Avatar" class="avatar">
             </div>
@@ -30,7 +30,7 @@
 
             <div class="container" style="background-color:#f1f1f1">
                 <button type="button"
-                    class="cancelbtn" onclick="document.getElementById('id01').style.display='none'">Cancelar</button>
+                    class="cancelbtn" onclick="document.getElementById('login-form-wrapper').style.display='none'">Cancelar</button>
                 <span class="psw"><a href="#">Esqueceu sua senha?</a></span>
             </div>
         </form>
