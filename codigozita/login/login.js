@@ -20,12 +20,9 @@ function login() {
                 localStorage.setItem("mylotte_token", json.access_token);
                 localStorage.setItem("mylotte_username", json.username);
                 document.getElementById('login-form-wrapper').style.display='none';
-                document.getElementById('login-button-placeholder').remove();
+                document.getElementById('login-form-wrapper').remove();
             })
         }
-    })
-    .then(json => {
-        console.log(json);
     })
     .catch(err => {
         console.log(err);
