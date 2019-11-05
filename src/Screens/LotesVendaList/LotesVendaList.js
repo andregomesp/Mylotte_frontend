@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import LoteCard from './LoteCard';
-
+import LoteCard from '../../Components/LoteCard/LoteCard';
 
 const lotes = []
 
-export default class LotesList extends Component {
+export default class LotesVendaList extends Component {
     renderLotesList = () => {
         if (this.props.lotes) {
             return this.props.lotes.map(lote => {
