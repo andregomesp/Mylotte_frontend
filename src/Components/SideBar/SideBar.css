@@ -1,0 +1,25 @@
+.sidebar {
+    background-color: #ffcc00;
+    width: 15em;
+    height: 30em;
+}
+
+.sidebar-item {
+    padding: 0;
+    background-color: #ffcc00;
+    width: 100%;
+    height: 5em;
+    text-align: left;
+    padding-left: 0.5em;
+    border-color: brown;
+    border-spacing: 0;
+    border-width: 0 1px 1px 1px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.sidebar-item:hover {
+    background-color:orange;
+    color:white;
+    opacity: 0.8;
+}

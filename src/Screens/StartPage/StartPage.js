@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-
-export default class StartPage extends Component() {
+import Caroussel from "../../Components/Caroussel/Caroussel"
+export default class StartPage extends Component {
   render() {
     return (
-      <></>
+      <div>
+        <Caroussel/>
+      </div>
     )
   }
 }
