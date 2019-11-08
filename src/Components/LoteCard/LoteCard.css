@@ -1,0 +1,41 @@
+.card-left-area {
+    float: left;
+    width: 70%;
+}
+
+.card-button-section {
+    float: left;
+    width: 29%;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 1%;
+}
+
+.card-first-row {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.card-lower-info {
+    float: left;
+}
+
+.card-wrapper {
+    width: 100%;
+    margin-left: 0.5em;
+}
+
+.card-icon {
+    float: left;
+}
+
+.days-left-wrapper {
+    background-color: red;
+    width: 6em;
+    height: 2em;
+    float: left;
+    border-radius: 12px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}

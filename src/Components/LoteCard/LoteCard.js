@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import clock from "../../Assets/Images/clock.png";
 import heart from "../../Assets/Images/heart.png";
 import favorite from "../../Assets/Images/favorite.png";
+import "./LoteCard.css";
 const infos = [
     {"label": "Ordem Minima", "control": ""},
     {"label": "Qtd total no lote", "control": ""},
@@ -12,12 +13,25 @@ const infos = [
 export default class LoteCard extends Component {
     render() {
         return (
-            <div>
-                <div className={"card-left-area"}>Titulo</div>
-                <div className={"card-button-section"}>
-                    <img src={clock} alt="clock"/>
-                    <img src={heart} alt="heart"/>
-                    <img src={favorite} alt="favorite"/>
+            <div className={"card-wrapper"}>
+                <div className={"card-first-row"}>
+                    <div className={"card-left-area"}>
+                        <div className={"image-section"}>
+
+                        </div>
+                        <div>
+                            Título
+                        </div>
+                        <div>
+                            Subtítulo
+                        </div>
+                    </div>
+                    <div className={"card-button-section"}>
+                        <img className={"card-icon"} src={clock} alt="clock"/>
+                        <div className={"days-left-wrapper"}></div>
+                        <img className={"card-icon"} src={heart} alt="heart"/>
+                        <img className={"card-icon"} src={favorite} alt="favorite"/>
+                    </div>
                 </div>
                 <div className={"card-lower-info"}>
                     {
