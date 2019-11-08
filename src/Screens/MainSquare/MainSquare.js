@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import StartPage from "../StartPage/StartPage";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {Router, Switch, Route} from 'react-router-dom';
+import history from "../../history";
 import LotesCompraList from '../LotesCompraList/LotesCompraList';
 import LotesVendaList from "../LotesVendaList/LotesVendaList";
 export default class MainSquare extends Component {
@@ -14,11 +15,11 @@ export default class MainSquare extends Component {
 
     render() {
         return (
-            <Router>
+            <Router history={history}>
                 <Switch>
                     <Route exact path="/"><StartPage/></Route>
                     <Route exact path="/lotesCompra"><LotesCompraList/></Route>
-                    <Route exact path="/lotesVenda"><LotesVe/></Route>
+                    <Route exact path="/lotesVenda"><LotesVendaList/></Route>
                 </Switch>
                 
             </Router>

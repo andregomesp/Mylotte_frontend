@@ -9,7 +9,6 @@ const infos = [
     {"label": "Preço Lote", "control": ""},
 ]
 
-
 export default class LoteCard extends Component {
     render() {
         return (
