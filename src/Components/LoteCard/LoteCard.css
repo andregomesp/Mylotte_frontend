@@ -18,11 +18,18 @@
 
 .card-lower-info {
     float: left;
+    width: 80%;
+    margin-top: 1em;
 }
 
 .card-wrapper {
-    width: 100%;
+    width: 98%;
     margin-left: 0.5em;
+    border-radius: 4px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.5em;
 }
 
 .card-icon {
@@ -38,4 +45,55 @@
     border-color: black;
     border-style: solid;
     border-width: 1px;
+}
+
+.image-section {
+    width: 12%;
+    height: 10em;
+    float: left;
+    border-radius: 12px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 2px 2px yellow;
+    margin-right: 2em;
+}
+
+.card-lower-buttons {
+    float: right;
+    margin-right: 2em;
+    margin-bottom: 0.6em;
+    padding-left: 0.5em;
+    width: 100%;
+    margin-top: -0.1em;
+}
+
+.card-yellow-button {
+    float: right;
+    margin-right: 0.5em;
+    background-color: #cad621;
+    color: black;
+    font-weight: 600;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 4px;
+    margin-bottom: 0.3em;
+}
+
+.card-info-box {
+    width: 3em;
+    height: 3em;
+    border-color: red;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 12px;
+    float: left;
+    margin-right: 2em;
+}
+
+.card-info-label {
+    float: left;
+    margin-top: 0.5em;
+    margin-right: 0.4em;
+    color: red;
 }
