@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Modal} from 'react-bootstrap';
+import {Modal, Form} from 'react-bootstrap';
 let context;
 export default class LotesCompraRatear extends Component {
     constructor(props) {

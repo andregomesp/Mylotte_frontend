@@ -2,14 +2,23 @@ import React, {Component} from 'react';
 import clock from "../../Assets/Images/clock.png";
 import heart from "../../Assets/Images/heart.png";
 import favorite from "../../Assets/Images/favorite.png";
+import {show as ratearModalShow} from "../../Screens/LotesCompraList/LoteCompraRatear";
 import "./LoteCard.css";
-const infos = [
-    {"label": "Ordem Minima", "control": ""},
-    {"label": "Qtd total no lote", "control": ""},
-    {"label": "Preço Lote", "control": ""},
-]
 
 export default class LoteCard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+    getInfos = () => {
+        let lote = this.props.lote
+        return [
+            {"label": "Preço Unitário", "control": "", "value": lote.unitPrice},
+            {"label": "Qtd total", "control": "", "value": lote.totalQuantity},
+            {"label": "Preço total", "control": "", "value": lote.totalPrice},
+        ]
+    }
+
     render() {
         return (
             <>
@@ -21,10 +30,10 @@ export default class LoteCard extends Component {
                         
                         <div className={"card-left-area"}>
                             <div>
-                                Título
+                                {this.props.lote.product.name}
                             </div>
                             <div>
-                                Subtítulo
+                                {this.props.lote.product.manufacturer}
                             </div>
                         </div>
                         <div className={"card-button-section"}>
@@ -36,11 +45,11 @@ export default class LoteCard extends Component {
                     </div>
                     <div className={"card-lower-info"}>
                         {
-                            infos.map(info => {
+                            this.getInfos().map(info => {
                                 return (
                                     <div className={"card-info-wrapper"}>
                                         <div className={"card-info-label"}>{info.label}</div>
-                                        <div className="card-info-box"></div>
+                                <div className="card-info-box">{info.value}</div>
                                     </div>
                                 )
                             })
@@ -48,8 +57,8 @@ export default class LoteCard extends Component {
                     </div>
                 </div>
                 <div className={"card-lower-buttons"}>
-                    <button className={"card-yellow-button"}>Ratear Lote</button>
-                    <button className={"card-yellow-button"}>Arrematar Lote</button>
+                    <button className={"card-yellow-button"} onClick={() => ratearModalShow(this.props.lote)}>Ratear Lote</button>
+                    {/* <button className={"card-yellow-button"}>Arrematar Lote</button> */}
                 </div>
             </>
         )
