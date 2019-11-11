@@ -1,43 +1,36 @@
 import React, {Component} from 'react';
-import "./StepCards.css";
 import step1 from "../../Assets/Images/step1.jpg";
 import step2 from "../../Assets/Images/step2.jpg";
 import step3 from "../../Assets/Images/step3.jpg";
 import step4 from "../../Assets/Images/step4.jpg";
+import medalha1 from "../../Assets/Images/medalha1.png";
+import medalha2 from "../../Assets/Images/medalha2.png";
+import medalha3 from "../../Assets/Images/medalha3.png";
+import medalha4 from "../../Assets/Images/medalha4.png";
 
-class StepCards extends Component {
-    render() {
-
+const steps = [step1, step2, step3, step4];
+const medalhas = [medalha1, medalha2, medalha3, medalha4];
+export default class StepCards extends Component {
+  
+  renderSteps = () => {
+    return steps.map((step, index) => {
       return (
-
-        <div className={"divSteps"}>
-            <div class="stepsLine" /> 
-            <div className={"stepline-placeholder"} />
-                <div className={"img1"}>
-                       <img src= {step1} width={640} height={380}/>
-                       <div class={"content1"} />  
-                       <p  class={"pstep1"}> Cadastre e se torne um de nossos colaboradores! </p>
-                  </div>
-                <div className={"img2"} >
-                    <img src={step2} width={640} height={380} />
-                    <div class={"content2"} />  
-                       <p  class={"pstep2"}>Anuncie seus lotes! </p>
-                </div>
-                <div className={"img3"} >
-                    <img src={step3} width={640} height={380} />
-                    <div class={"content3"} />  
-                       <p  class={"pstep3"}>Compre e venda seus lotes a seu preco </p>
-                </div>
-
-                <div className={"img4"} >
-                    <img src={step4}  width={640} height={380}/>
-                    <div class={"content3"} />  
-                       <p  class={"pstep3"}>Realize seu melhor negocio</p>
-               </div>
+        <div class="step-holder">
+          <a class="stepLink" href="#cadastro">
+              <img class="step" src={step} alt="Primeiro Passo"/>
+              <div class="content">
+                  <p class="p1step"> Cadastre-se e torne-se um de nossos colaboradores!</p>
+                  <img class="medalha1" src={medalhas[index]}/>
+              </div> 
+          </a>
         </div>
-           
       )
-    }
-}
-
-export default StepCards;
+    })
+  }
+  
+  render() {
+    return (
+      <>{this.renderSteps()}</>
+    )
+  }
+} 
