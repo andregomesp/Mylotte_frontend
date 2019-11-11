@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import TopBar from './Components/TopBar/TopBar';
 import "./App.css";
 import SideBar from './Components/SideBar/SideBar';
@@ -6,6 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MainSquare from './Screens/MainSquare/MainSquare';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
+import LoginModal from './Screens/LoginModal/LoginModal';
+import PageFooter from './Components/PageFooter/PageFooter';
+import Caroussel from './Components/Caroussel/Caroussel.js';
+import StepCards from './Components/StepCards/StepCards.js';
+
 
 const options = {
   // you can also just use 'bottom center'
@@ -16,6 +21,8 @@ const options = {
   transition: transitions.SCALE
 }
 
+
+
 export default class App extends Component {
   render() {
     return (
@@ -24,9 +31,12 @@ export default class App extends Component {
           <TopBar/>
           <SideBar/>
           <MainSquare/>
+          <PageFooter/> 
+          <LoginModal/>
+          <Caroussel />
+          <StepCards />
         </div>
-      </AlertProvider>
-      
+      </AlertProvider>   
     )
   }
 }

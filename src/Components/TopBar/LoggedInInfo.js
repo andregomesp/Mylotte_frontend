@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import loggedInUser from "../../Assets/Images/iconUsuario.png"
+import loggedInUser from "../../Assets/Images/iconeUsuario.png"
 
 export default class LoggedInInfo extends Component {
     render() {
