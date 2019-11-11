@@ -30,9 +30,9 @@ export default class App extends Component {
           <TopBar/>
           <SideBar/>
           <MainSquare/>
-          <PageFooter/> 
           <LoginModal/>
           <StepCards />
+          <PageFooter/> 
         </div>
       </AlertProvider>   
     )

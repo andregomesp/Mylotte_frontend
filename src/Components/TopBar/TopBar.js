@@ -3,6 +3,7 @@ import Logo from "../../Assets/Images/lotteLogo.png";
 import "./TopBar.css";
 import YellowUserIcon from "../../Assets/Images/yellowIcon.png";
 import LoggedInInfo from './LoggedInInfo';
+import show from "../../Screens/LoginModal/LoginModal";
 let context;
 export default class TopBar extends Component {
   constructor(props) {

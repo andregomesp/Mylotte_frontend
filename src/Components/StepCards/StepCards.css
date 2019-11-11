@@ -1,189 +1,86 @@
-.stepsLine {
-    margin-top: 20px;
-    background-color: #0e0622;
-    border:2px #0e0622;
-    border-radius: 20px;
+
+.divSteps {
+
+background-color: azure;
+width: 100%;
+height: 740px;
+}
+
+.step-holder {
+position: relative;
+float: left;
+width: 35em;
+margin-left: 5em;
+margin-top: 5em;
+}
+
+.step-wrapper {
     background-color: azure;
+    float:left;
+    border-bottom: 4px;
+}
+
+#stepline-placeholder {
+display: flex;
+width: 80em;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.stepsLine {
+border-radius: 8px;
+height: 8px;
+width: 100%;
+background-color: #c4c4c4;
+margin-bottom: 2em;
+position: relative;
 
 }
 
 .stepsTitle {
-
-    margin-top: 2em;
-    margin-left: 1em;
+padding-top: 14px;
+margin-left: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 21px;
+color: #5f5f5f;
 }
 
 
-.img1 {
-    margin-left: 10em;
-    background-color: #000000;
-    position: absolute;
-    z-index: 0;
+.step {
+height: 17em;
+width: 100%;
+background-color: #000000;
 }
 
-.img1:hover{
-    filter: blur(8px);
-    transition: .5s ease;
-    /* background: #000000; */
-    opacity: 1;
+.step:hover{
+filter: blur(8px);
+transition: .5s ease;
+background: #000000;
+opacity: 1;
 }
 
-.content1 {
-    z-index: 3;
-    position: absolute;
-    margin-top: -2px;
-    margin-left: -1px;
-    width: 642px;
-    height: 68px;
-    background: rgba(187, 187, 187, 0.9);
-    border-top: 1px solid #f8fc2e;
+
+.content {
+position: relative;
+width: 100%;
+height: 3em;
+background: rgb(202, 202, 202);
+background: rgba(255, 255, 255, 0.9);
+border-top: 1px solid #f8fc2e;
 }
 
-.pstep1 {
-    z-index:1;
-    margin-top: 20px;
-    margin-left: 30px;
-    font-size: 20px;
-    color: #030303;
-    background-color: #000000;
+.p1step1 {
+margin-top: 20px;
+margin-left: 30px;
+font-size: 18px;
+color: #0e0622;
 }
 
 .medalha1 {
-    height: 65px;
-    float: right;
-    margin-left: 400px;
-    position: relative;
-    margin-top: -62px;
-
-}
-
-.img2 {
-   margin-left: 61em;
-}
-
-.content2{
-    z-index: 3;
-    position: absolute;
-    margin-top: -1px;
-    margin-left: -1px;
-    width: 641px;
-    height: 68px;
-    background: rgba(187, 187, 187, 0.9);
-    border-top: 1px solid #f8fc2e;
-}
-
-
-.img2:hover {
-
-    /* color: black; */
-    transition: ease;
-    filter: blur(8px);
-    /* background-color: #000000; */
-}
-
-.p1step2 {
-    text-align: center;
-    margin-top: 20px;
-    margin-left: -420px;
-    font-size: 18px;
-    color: #000000
-}
-
-.medalha2 {
-
-  height: 65px;
-  float: right;
-  margin-left: -290px;
-  position: relative;
-  margin-top: -69px;
-
-}
-
-.img3 {
-    position: relative;
-    margin-top: 639px;
-    margin-left: 15em;
-    width: 640;
-    height: 380;
-}
-
-.img3:hover {
-
-    color: black;
-    transition: ease;
-    filter: blur(8px);
-}
-
-.content3 {
-    z-index: 3;
-    position: absolute;
-    margin-top: -1px;
-    margin-left: -1px;
-    width: 641px;
-    height: 68px;
-    background: rgba(187, 187, 187, 0.9);
-    border-top: 1px solid #f8fc2e;
-}
-.p1step3 {
-
-
-    margin-top: 20px;
-    margin-left: 30px;
-    font-size: 18px;
-    color: #0e0622;
-}
-
-.medalha3 {
-
-    height: 65px;
-    float: right;
-    position: relative;
-    margin-top: -58px;
-
-}
-
-.img4 {
-
-  position: relative;
-  margin-top: -420px;
-  margin-left: 61em;
-  width: 640;
-  height: 380;
-  
-}
-
-.img4:hover {
-
-    color: black;
-    transition: ease;
-    filter: blur(8px);
-}
-
-.content4 {
-    z-index: 3;
-    position: absolute;
-    margin-top: -10px;
-    margin-left: -1px;
-    width: 641px;
-    height: 68px;
-    background: rgba(187, 187, 187, 0.9);
-    border-top: 1px solid #f8fc2e;
-}
-
-.p1step4 {
-
-    text-align: center;
-    margin-top: 20px;
-    margin-left: -120px;
-    font-size: 18px;
-    color: #0e0622;
-}
-
-.medalha4 {
-
-    height: 65px;
-    margin-left: 440px;
-    position: absolute;
-    margin-top: -63px;
+height: 65px;
+float: right;
+margin-left: 400px;
+position: relative;
+margin-top: -62px;
 
 }

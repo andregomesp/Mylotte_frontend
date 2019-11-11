@@ -69,10 +69,10 @@ export default class LoginModal extends Component {
     }
 }
 
-export function show(lote) {
-    context.setState({show: true, lote: lote});    
+export function show() {
+    context.setState({show: true});    
 }
 
 export function hide() {
-    context.setState({show: false, lote: {}});
+    context.setState({show: false});
 }
