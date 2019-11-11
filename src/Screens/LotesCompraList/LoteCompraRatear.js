@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Modal, Form} from 'react-bootstrap';
 import config from "../../config.json"
 import "./LoteCompraRatear.css";
+import { useAlert } from 'react-alert';
 let context;
 
 export default class LotesCompraRatear extends Component {
@@ -28,6 +29,7 @@ export default class LotesCompraRatear extends Component {
         .then(r => {
             r.json()
             .then(_ => {
+                useAlert().show("Lote solicitado com sucesso");
                 this.setState({show: false, lote: {}})
             })
         })
