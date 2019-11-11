@@ -1,5 +1,6 @@
 import {Modal, Form} from 'react-bootstrap';
-import "LoginModal.css"
+import React, { Component } from 'react';
+import "./LoginModal.css"; 
 export default class LoginModal extends Component {
     constructor(props) {
         super(props)
