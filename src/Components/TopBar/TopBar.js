@@ -2,8 +2,14 @@ import React, {Component} from 'react';
 import Logo from "../../Assets/Images/lotteLogo.png";
 import "./TopBar.css";
 import YellowUserIcon from "../../Assets/Images/yellowIcon.png";
-
-class TopBar extends Component {
+import LoggedInInfo from './LoggedInInfo';
+let context;
+export default class TopBar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {};
+    context = this; 
+  }
   render() {
     return (
       <div className={"topbar"}>
@@ -14,10 +20,14 @@ class TopBar extends Component {
           </div>
           <button className="searchTopButton">Pesquisar</button>
         </span>
-        <button className="topbar-buttons login-button">
-          <img className="loginIcon" src={YellowUserIcon} alt={"yellow-icon"}/>
-          <div className="login-text">Login</div>
-        </button>
+        {localStorage.getItem("mylotte_token") 
+          ? (<LoggedInInfo/>)
+          : (<button className="topbar-buttons login-button">
+              <img className="loginIcon" src={YellowUserIcon} alt={"yellow-icon"}/>
+              <div className="login-text">Login</div>
+            </button>)
+        }
+        
         <button className="topbar-buttons about-us-button">
           Sobre Nós
         </button>
@@ -27,4 +37,6 @@ class TopBar extends Component {
   }
 }
 
-export default TopBar;
+export function login() {
+  context.setState({a: "a"})
+}
