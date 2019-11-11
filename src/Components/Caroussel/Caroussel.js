@@ -12,7 +12,7 @@ export default class Caroussel extends Component {
 
       <div className ={"carroussel-container"}>
           <div class = {"mySlides"}>
-            <div class="numbertext">1 / 3</div>
+            {/* <div class="numbertext">1 / 3</div> */}
               <img src={Sale}  width={1600} height={640} infinite={false}/>
             {/* <div class="numbertext">2 / 3</div>
               <img src ={Sale2}  width={1600} height={640} infinite={false} />

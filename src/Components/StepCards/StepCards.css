@@ -1,3 +1,19 @@
+.stepsLine {
+    margin-top: 20px;
+    background-color: #0e0622;
+    border:2px #0e0622;
+    border-radius: 20px;
+    background-color: azure;
+
+}
+
+.stepsTitle {
+
+    margin-top: 2em;
+    margin-left: 1em;
+}
+
+
 .img1 {
     margin-top: 140px;
     margin-left: 15em;
