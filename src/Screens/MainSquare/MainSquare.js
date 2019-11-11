@@ -6,14 +6,6 @@ import LotesCompraList from '../LotesCompraList/LotesCompraList';
 import LotesVendaList from "../LotesVendaList/LotesVendaList";
 import "./MainSquare.css";
 export default class MainSquare extends Component {
-    constructor(props) {
-        super(props)
-    }
-
-    renderPage = () => {
-
-    }
-
     render() {
         return (
             <div className={"main-square-wrapper"}>

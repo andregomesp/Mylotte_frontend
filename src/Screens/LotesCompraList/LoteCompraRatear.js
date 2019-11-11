@@ -30,7 +30,8 @@ export default class LotesCompraRatear extends Component {
             r.json()
             .then(_ => {
                 useAlert().show("Lote solicitado com sucesso");
-                this.setState({show: false, lote: {}})
+                this.props.getEntities();
+                this.setState({show: false, lote: {}});
             })
         })
         .catch(err => {

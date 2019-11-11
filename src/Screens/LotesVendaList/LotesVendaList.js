@@ -20,8 +20,8 @@ export default class LotesVendaList extends Component {
                             lote={lote}
                         />)
             })
-            return <></>
         }
+        return <></>
     }
 
     render() {

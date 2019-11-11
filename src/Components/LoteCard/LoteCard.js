@@ -4,12 +4,24 @@ import heart from "../../Assets/Images/heart.png";
 import favorite from "../../Assets/Images/favorite.png";
 import {show as ratearModalShow} from "../../Screens/LotesCompraList/LoteCompraRatear";
 import "./LoteCard.css";
+import jeans from "../../Assets/Images/calcabigjeans.jpg";
+import lacoste from "../../Assets/Images/lacoste.jpg";
 
 export default class LoteCard extends Component {
     constructor(props) {
         super(props);
         this.state = {}
     }
+    getImage = () => {
+        let lote = this.props.lote;
+        if (lote.product.name === "Calça Jeans") {
+            console.log(jeans);
+            return jeans
+        } else if (lote.product.name === "Camisa Polo") {
+            return lacoste;
+        }
+    }
+
     getInfos = () => {
         let lote = this.props.lote
         return [
@@ -34,7 +46,7 @@ export default class LoteCard extends Component {
             <>
                 <div className={"card-wrapper"}>
                     <div className={"image-section"}>
-                                        
+                        <img className={"product-image"} src={this.getImage()} alt="lul"/>         
                     </div>
                     <div className={"card-first-row"}>
                         

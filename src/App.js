@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import TopBar from './Components/TopBar/TopBar';
 import "./App.css";
 import SideBar from './Components/SideBar/SideBar';
-import StartPage from './Screens/StartPage/StartPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainSquare from './Screens/MainSquare/MainSquare';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert';
