@@ -8,7 +8,6 @@ import { transitions, positions, Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
 import LoginModal from './Screens/LoginModal/LoginModal';
 import PageFooter from './Components/PageFooter/PageFooter';
-import Caroussel from './Components/Caroussel/Caroussel.js';
 import StepCards from './Components/StepCards/StepCards.js';
 
 
@@ -33,7 +32,6 @@ export default class App extends Component {
           <MainSquare/>
           <PageFooter/> 
           <LoginModal/>
-          <Caroussel />
           <StepCards />
         </div>
       </AlertProvider>   

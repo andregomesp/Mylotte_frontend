@@ -1,3 +1,7 @@
 .app {
     width: 100vw;
 } 
+
+.main-wrapper {
+    height: 100%;
+}

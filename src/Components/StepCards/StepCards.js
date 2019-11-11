@@ -13,9 +13,6 @@ class StepCards extends Component {
         <div className={"divSteps"}>
             <div class="stepsLine" /> 
             <div className={"stepline-placeholder"} />
-            <div className={"stepNav"}>
-                <p class="stepsTitle">NOSSO SERVIÇOS À SUA DISPOSIÇÃO </p>
-            </div>  
                 <div className={"img1"}>
                        <img src= {step1} width={640} height={380}/>
                        <div class={"content1"} />  

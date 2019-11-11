@@ -15,8 +15,7 @@
 
 
 .img1 {
-    margin-top: 140px;
-    margin-left: 15em;
+    margin-left: 10em;
     background-color: #000000;
     position: absolute;
     z-index: 0;
@@ -59,10 +58,7 @@
 }
 
 .img2 {
-
-   margin-top: 142px;
    margin-left: 61em;
-   position: absolute;
 }
 
 .content2{
