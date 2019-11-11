@@ -45,6 +45,8 @@
     border-color: black;
     border-style: solid;
     border-width: 1px;
+    color: yellow;
+    text-align: center;
 }
 
 .image-section {
@@ -91,8 +93,6 @@
     float: left;
     margin-right: 2em;
     text-align: center;
-
-
 }
 
 .card-info-label {
@@ -100,4 +100,18 @@
     margin-top: 0.5em;
     margin-right: 0.4em;
     color: red;
+}
+
+.quantity-area {
+    width: 3.8em;
+    height: 2.8em;
+    border-color: red;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    float: right;
+    margin-right: 2em;
+    text-align: center;
+    padding-top: 0.4em;
+
 }

@@ -19,6 +19,16 @@ export default class LoteCard extends Component {
         ]
     }
 
+    getRemainingTime = () => {
+        let closingDateString = this.props.lote.closingDate;
+        let closingDate = Date.parse(closingDateString);
+        let today = new Date().getTime();
+        let difference = Math.floor((closingDate - today)/(1000 * 3600 * 24));
+        if (difference > 0) {return `${difference} dias`}
+        else if (difference === 0) {return "Hoje"}
+        return "Fechado"; 
+    }
+
     render() {
         return (
             <>
@@ -38,7 +48,7 @@ export default class LoteCard extends Component {
                         </div>
                         <div className={"card-button-section"}>
                             <img className={"card-icon"} src={clock} alt="clock"/>
-                            <div className={"days-left-wrapper"}></div>
+                            <div className={"days-left-wrapper"}>{this.getRemainingTime()}</div>
                             <img className={"card-icon"} src={heart} alt="heart"/>
                             <img className={"card-icon"} src={favorite} alt="favorite"/>
                         </div>
@@ -58,7 +68,9 @@ export default class LoteCard extends Component {
                 </div>
                 <div className={"card-lower-buttons"}>
                     <button className={"card-yellow-button"} onClick={() => ratearModalShow(this.props.lote)}>Ratear Lote</button>
-                    {/* <button className={"card-yellow-button"}>Arrematar Lote</button> */}
+                    <div className="quantity-area">
+                        {`${this.props.lote.currentQuantity}/${this.props.lote.totalQuantity}`}
+                    </div>
                 </div>
             </>
         )

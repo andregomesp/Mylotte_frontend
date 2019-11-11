@@ -1,36 +1,44 @@
 import React, {Component} from 'react';
 import {Modal, Form} from 'react-bootstrap';
+import config from "../../config.json"
+import "./LoteCompraRatear.css";
 let context;
+
 export default class LotesCompraRatear extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: false
+            show: false,
+            lote: {}
         }
         context = this;
     }
     ratearQuantidade = (e) => {
-        
-        let form = e.form;
-        console.log(form);
-        // componentDidMount() {
-        //     fetch(`http://${config["serverBaseUrl"]}api/enterLot`, {method: 'POST', body: {}, mode: "cors"})
-        //     .then(r => {
-        //         if (!r.ok) {throw Error("não foi possivel logar!")}
-        //         r.json()
-        //         .then(json => {
-        //             this.setState({lotes: json})
-        //         })
-        //     })
-        //     .catch(err => {
-        //         console.log(err);
-        //     })
-        // }
+        e.preventDefault();
+        let form = e.target;
+        let entity = {
+            offeredQuantity: parseInt(form[0].value, 10),
+            offeredPrice: this.state.lote.unitPrice,
+            companyId: this.state.lote.ownerCompany.id,
+            lotId: this.state.lote.id
+        }
+        let headers = new Headers();
+        headers.append("Authorization", localStorage.getItem("mylotte_token"));
+        fetch(`http://${config["serverBaseUrl"]}api/lot/enterLot`, {method: 'POST', body: JSON.stringify(entity), mode: "cors", headers: headers})
+        .then(r => {
+            r.json()
+            .then(_ => {
+                this.setState({show: false, lote: {}})
+            })
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
 
     render() {
         return (
-            <Modal show={this.state.show}>
+            <Modal show={this.state.show} onHide={hide}>
                 <Modal.Header closeButton>
                     <Modal.Title>
                         <div>
@@ -41,7 +49,7 @@ export default class LotesCompraRatear extends Component {
                 <Modal.Body>
                     <div>
                         <Form id={"compra-form"} onSubmit={this.ratearQuantidade}>
-                            <Form.Group>
+                            <Form.Group controlId={"quantidade"}>
                                 <Form.Label>
                                     Quantidade
                                 </Form.Label>
@@ -52,7 +60,7 @@ export default class LotesCompraRatear extends Component {
                 </Modal.Body>
                 <Modal.Footer>
                     <div>
-                        <button type="submit" form={"compra-form"}>Confirmar</button>    
+                        <button className={"modal-green-button"} type="submit" form={"compra-form"}>Confirmar</button>    
                     </div>
                 </Modal.Footer>
             </Modal>
@@ -60,10 +68,10 @@ export default class LotesCompraRatear extends Component {
     }
 }
 
-export function show() {
-    context.setState({show: true});    
+export function show(lote) {
+    context.setState({show: true, lote: lote});    
 }
 
 export function hide() {
-    context.setState({show: false});
+    context.setState({show: false, lote: {}});
 }
