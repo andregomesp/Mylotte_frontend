@@ -34,6 +34,7 @@ export default class LotesCompraList extends Component {
         return this.state.lotes.map(lote => {
             return  (<LoteCard
                         lote={lote}
+                        type={"COMPRA"}
                     />)
         })
     }

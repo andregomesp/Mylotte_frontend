@@ -71,10 +71,13 @@ export default class LoteCard extends Component {
                                 return (
                                     <div className={"card-info-wrapper"}>
                                         <div className={"card-info-label"}>{info.label}</div>
-                                <div className="card-info-box">{info.value}</div>
+                                        <div className="card-info-box">{info.value}</div>
                                     </div>
                                 )
                             })
+                        }
+                        {this.props.lote.ownedQuantity && this.props.lote.ownedQuantity > 0 &&
+                            <div>Possuo {this.props.lote.ownedQuantity} unidades</div>
                         }
                     </div>
                 </div>

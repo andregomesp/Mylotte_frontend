@@ -4,28 +4,18 @@ import "./App.css";
 import SideBar from './Components/SideBar/SideBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainSquare from './Screens/MainSquare/MainSquare';
-import { transitions, positions, Provider as AlertProvider } from 'react-alert';
-import AlertTemplate from 'react-alert-template-basic';
 import LoginModal from './Screens/LoginModal/LoginModal';
 import PageFooter from './Components/PageFooter/PageFooter';
 import StepCards from './Components/StepCards/StepCards.js';
-
-
-const options = {
-  // you can also just use 'bottom center'
-  position: positions.TOP_RIGHT,
-  timeout: 3000,
-  offset: '30px',
-  // you can also just use 'scale'
-  transition: transitions.SCALE
-}
+import Alert from 'react-s-alert';
+import 'react-s-alert/dist/s-alert-default.css';
+import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 
 
 
 export default class App extends Component {
   render() {
     return (
-      <AlertProvider template={AlertTemplate} {...options}>
         <div className="app">
           <TopBar/>
           <SideBar/>
@@ -33,8 +23,8 @@ export default class App extends Component {
           <LoginModal/>
           <StepCards />
           <PageFooter/> 
-        </div>
-      </AlertProvider>   
+          <Alert stack={{limit: 3}} position={"top-right"}/>
+        </div>   
     )
   }
 }

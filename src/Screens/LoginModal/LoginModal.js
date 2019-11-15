@@ -1,7 +1,9 @@
 import {Modal, Form} from 'react-bootstrap';
 import React, { Component } from 'react';
 import config from "../../config.json";
-import "./LoginModal.css"; 
+import "./LoginModal.css";
+import Alert from 'react-s-alert'; 
+import { login } from '../../Components/TopBar/TopBar.js';
 let context;
 export default class LoginModal extends Component {
     constructor(props) {
@@ -14,6 +16,7 @@ export default class LoginModal extends Component {
 
     login = (e) => {
         e.preventDefault();
+        console.log(e);
         let form = e.target;
         let entity = {
             username: form[0].value,
@@ -25,7 +28,10 @@ export default class LoginModal extends Component {
             r.json()
             .then(json => {
                 localStorage.setItem("mylotte_token", json.access_token);
-                localStorage.setItem("mylotte_username", json.username)
+                localStorage.setItem("mylotte_username", json.username);
+                Alert.success("Login efetuado com sucesso");
+                hide();
+                login();
             })
         })
         .catch(err => {
@@ -35,7 +41,7 @@ export default class LoginModal extends Component {
 
     render() {
         return (
-            <Modal show={this.state.show}>
+            <Modal show={this.state.show} onHide={() => hide()}>
                 <Modal.Header closeButton>
                     <Modal.Title>
                         <div>
@@ -45,7 +51,7 @@ export default class LoginModal extends Component {
                 </Modal.Header>
                 <Modal.Body>
                     <div>
-                        <Form onSubmit={this.login}>
+                        <Form id="login-form" onSubmit={this.login}>
                             <Form.Group controlId="email">
                                 <Form.Label>
                                     Email
@@ -62,7 +68,7 @@ export default class LoginModal extends Component {
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
-                    <div></div>
+                    <button type="submit" form="login-form" className={"confirm-button"}>Confirmar</button>
                 </Modal.Footer>
             </Modal>
         )

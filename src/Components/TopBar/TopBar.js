@@ -3,7 +3,7 @@ import Logo from "../../Assets/Images/lotteLogo.png";
 import "./TopBar.css";
 import YellowUserIcon from "../../Assets/Images/yellowIcon.png";
 import LoggedInInfo from './LoggedInInfo';
-import show from "../../Screens/LoginModal/LoginModal";
+import {show} from "../../Screens/LoginModal/LoginModal";
 let context;
 export default class TopBar extends Component {
   constructor(props) {
@@ -23,7 +23,7 @@ export default class TopBar extends Component {
         </span>
         {localStorage.getItem("mylotte_token") 
           ? (<LoggedInInfo/>)
-          : (<button className="topbar-buttons login-button">
+          : (<button className="topbar-buttons login-button" onClick={() => show()}>
               <img className="loginIcon" src={YellowUserIcon} alt={"yellow-icon"}/>
               <div className="login-text">Login</div>
             </button>)
