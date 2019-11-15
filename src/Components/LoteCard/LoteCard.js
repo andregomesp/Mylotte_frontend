@@ -3,6 +3,7 @@ import clock from "../../Assets/Images/clock.png";
 import heart from "../../Assets/Images/heart.png";
 import favorite from "../../Assets/Images/favorite.png";
 import {show as ratearModalShow} from "../../Screens/LotesCompraList/LoteCompraRatear";
+import {show as oferecerModalShow} from "../../Screens/LotesVendaList/LotesVendaRatear";
 import "./LoteCard.css";
 import jeans from "../../Assets/Images/calcabigjeans.jpg";
 import lacoste from "../../Assets/Images/lacoste.jpg";
@@ -23,7 +24,7 @@ export default class LoteCard extends Component {
     }
 
     getInfos = () => {
-        let lote = this.props.lote
+        let lote = this.props.lote;
         return [
             {"label": "Preço Unitário", "control": "", "value": lote.unitPrice},
             {"label": "Qtd total", "control": "", "value": lote.totalQuantity},
@@ -46,7 +47,7 @@ export default class LoteCard extends Component {
             <>
                 <div className={"card-wrapper"}>
                     <div className={"image-section"}>
-                        <img className={"product-image"} src={this.getImage()} alt="lul"/>         
+                        <img className={"product-image"} src={this.getImage()} alt="nil"/>         
                     </div>
                     <div className={"card-first-row"}>
                         
@@ -82,10 +83,16 @@ export default class LoteCard extends Component {
                     </div>
                 </div>
                 <div className={"card-lower-buttons"}>
-                    <button className={"card-yellow-button"} onClick={() => ratearModalShow(this.props.lote)}>Ratear Lote</button>
-                    <div className="quantity-area">
-                        {`${this.props.lote.currentQuantity}/${this.props.lote.totalQuantity}`}
-                    </div>
+                    {this.props.type === "COMPRA" ?
+                        (<button className={"card-yellow-button"} onClick={() => ratearModalShow(this.props.lote)}>Ratear</button>)
+                        :
+                        (<button className={"card-yellow-button"} onClick={() => oferecerModalShow(this.props.lote)}>Ofertar</button>)
+                    }
+                    {this.props.type === "COMPRA" &&
+                        <div className="quantity-area">
+                            {`${this.props.lote.currentQuantity}/${this.props.lote.totalQuantity}`}
+                         </div>
+                    }
                 </div>
             </>
         )

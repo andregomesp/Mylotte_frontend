@@ -32,7 +32,11 @@ export default class StepCards extends Component {
   
   render() {
     return (
-      <div className={"step-wrapper"}>{this.renderSteps()}</div>
+      <>
+        {!localStorage.getItem("mylotte_token") &&
+          <div className={"step-wrapper"}>{this.renderSteps()}</div>
+        }
+      </>
     )
   }
 } 
