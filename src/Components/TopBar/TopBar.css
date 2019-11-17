@@ -8,13 +8,15 @@
 }
 
 .logo {
-    height: 8em;
     margin-top: -1.5em;
+    margin-left: -1.0em;  
+    height: 8em;
+    width: 13em;
 }
 
 .login-button {
     margin-top: 1.1em;
-    margin-right: 1em;
+    margin-right: 1.8em;
     margin-left: 2.8em;
 }
 
@@ -28,6 +30,7 @@
 
 .about-us-button {
     margin-top: 1.1em;
+    margin-right: 4em;
 }
 
 .topbar-buttons {
@@ -35,7 +38,7 @@
     background-color:#292D3E;
     border: 1px solid#1D9AF2;
     border-radius: 4px;
-    font-size: 21px;
+    font-size: 20px;
     text-align: center;
     transition: all 0.2s ease-in-out;
     padding: 0 15px;
@@ -46,21 +49,23 @@
 
 .searchResearchBar {
     border-radius: 35px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 34px;
     color:rgb(0, 0, 0);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border: 1px solid #ccc;
     width: 38em;
-    height: 2.5em;
+    height: 2.6em;
     padding-left: 0.5em; 
 }
 
 .searchTopButton {
-    align-self: auto;
     width: 8em;
-    height: 1.8em;
-    border: .3px solid gold;
+    float: left;
+    margin-top: -2em;
+    margin-left: 21em;
+    height: 2em;
+    border: .2px solid gold;
     border-radius: 4px 32px 32px 4px;
     background-color: gold;
     cursor: pointer;

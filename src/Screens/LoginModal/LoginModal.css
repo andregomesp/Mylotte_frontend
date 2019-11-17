@@ -1,0 +1,30 @@
+.confirm-button {
+    background-color: #292D3E ;
+    color: yellow;
+    padding: 14px 20px;
+    font-size: 21px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#email {
+
+    border-color: #292D3E;
+    border-style: solid 4px;
+    padding: 0.2px;
+}
+
+#password {
+
+    border-color: #292D3E;
+    border-style: solid 4px;
+    padding: 0.2px;
+    
+
+
+}

@@ -44,7 +44,7 @@ export default class LotesCompraRatear extends Component {
             <Modal show={this.state.show} onHide={hide}>
                 <Modal.Header closeButton>
                     <Modal.Title>
-                        <div>
+                        <div className = {'ratear'}>
                             Ratear Lote    
                         </div>
                     </Modal.Title>

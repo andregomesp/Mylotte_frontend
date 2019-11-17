@@ -44,7 +44,7 @@ export default class MylottesList extends Component {
     render () {
         return (
             <div className={"table-wrapper"}>
-                <h2>Meus lotes</h2> 
+                <h2 className={"lotes"}>Meus lotes</h2> 
                 <Table striped bordered hover>
                     <thead>
                         <th>Produto</th>

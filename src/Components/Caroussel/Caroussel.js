@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import "./Caroussel.css";
 import Sale from "../../Assets/Images/sale.jpg";
-import Sale2 from "../../Assets/Images/sale2.jpg";
-import Sale3 from "../../Assets/Images/sale3.jpg";
+// import Sale2 from "../../Assets/Images/sale2.jpg";
+// import Sale3 from "../../Assets/Images/sale3.jpg";
 import slides from './FunctionSlide.js';
 
 export default class Caroussel extends Component {

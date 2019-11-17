@@ -14,7 +14,7 @@ export default class TopBar extends Component {
   render() {
     return (
       <div className={"topbar"}>
-        <img className={"logo"} src={Logo} alt="logo"/>
+        <img className={"logo"} src={Logo} alt="logo" width={320} height={300}/>
         <span className="searchWrapper">
           <div className="searchBarWrapper">
             <input className="searchResearchBar" placeholder="Pesquisar Produtos"/>

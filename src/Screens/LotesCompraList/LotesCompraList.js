@@ -3,6 +3,11 @@ import LoteCard from '../../Components/LoteCard/LoteCard';
 import config from "../../config.json";
 import "./LotesCompraList.css";
 import LotesCompraRatear from './LoteCompraRatear';
+import product1 from '../../Assets/Images/power_bank.jpg';
+import product2 from '../../Assets/Images/relogio.jfif';
+import product3 from '../../Assets/Images/jacket.jfif';
+import product4 from '../../Assets/Images/jeans.jpg';
+
 
 export default class LotesCompraList extends Component {
     constructor(props) {
@@ -18,7 +23,7 @@ export default class LotesCompraList extends Component {
     getEntities = () => {
         let headers = new Headers();
         headers.append("Authorization", localStorage.getItem("mylotte_token"));
-        fetch(`http://${config["serverBaseUrl"]}api/lot`, {method: 'GET', mode: "cors", headers: headers})
+        fetch(`http://${config["serverBaseUrl"]}api/lot?type=COMPRA`, {method: 'GET', mode: "cors", headers: headers})
         .then(r => {
             r.json()
             .then(json => {
@@ -46,6 +51,14 @@ export default class LotesCompraList extends Component {
                 <LotesCompraRatear
                     getEntities={this.getEntities}
                 />
+                <div className={"product1"} src ={product1} />
+                <div className={"product2"} src ={product2} />
+                <div className={"product3"} src ={product3} />
+                <div className={"product4"} src ={product4} />
+                
+                
+                
+                
             </div>
         )
     }

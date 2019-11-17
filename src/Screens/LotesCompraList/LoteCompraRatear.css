@@ -1,5 +1,11 @@
 .modal-green-button {
-    background-color: limegreen;
+    color:yellow;
+    background-color:#292D3E;
+    border: 1px solid#1D9AF2;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
     font-weight: 600;
     padding: 0.4em;
 }
