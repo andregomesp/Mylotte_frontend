@@ -5,7 +5,7 @@
 
 .card-button-section {
     float: left;
-    width: 29%;
+    width: 39%;
     display: flex;
     justify-content: space-around;
     margin-right: 1%;
@@ -25,7 +25,7 @@
 .card-wrapper {
     width: 98%;
     margin-left: 0.5em;
-    border-radius: 4px;
+    border-radius: 6px;
     border-color: black;
     border-style: solid;
     border-width: 1px;
@@ -49,15 +49,44 @@
     text-align: center;
 }
 
-.image-section {
-    width: 12%;
-    height: 10em;
+
+.days-left-wrapper2 {
+    background-color: rgb(0, 141, 0);
+    width: 6em;
+    height: 2em;
     float: left;
     border-radius: 12px;
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    box-shadow: 0 2px 2px yellow;
+    color: yellow;
+    text-align: center;
+}
+
+.days-left-wrapper3 {
+    background-color: rgb(241, 255, 51);
+    width: 6em;
+    height: 2em;
+    float: left;
+    border-radius: 12px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    text-align: center;
+}
+
+
+
+
+.image-section {
+    width: 16%;
+    height: 12em;
+    float: left;
+    border-radius: 3px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
     margin-right: 2em;
 }
 
@@ -73,13 +102,15 @@
 .card-yellow-button {
     float: right;
     margin-right: 0.5em;
-    background-color: #cad621;
-    color: black;
+    background-color: yellow;
+    border-color: #292D3E;
+    color: #292D3E;
     font-weight: 600;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     border-radius: 4px;
     margin-bottom: 0.3em;
+    width: 6em;
 }
 
 .card-info-box {
@@ -102,15 +133,21 @@
     color: red;
 }
 
+.owned {
+    margin-top: 8px;
+    color: blue;
+}
 .quantity-area {
     width: 3.8em;
     height: 2.8em;
-    border-color: red;
+    background-color:#292D3E;
+    border: 1px solid #1D9AF2;
     border-width: 1px;
     border-style: solid;
     border-radius: 4px;
     float: right;
     margin-right: 2em;
+    color: azure;
     text-align: center;
     padding-top: 0.4em;
 }

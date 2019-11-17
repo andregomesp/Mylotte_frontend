@@ -5,8 +5,14 @@ import favorite from "../../Assets/Images/favorite.png";
 import {show as ratearModalShow} from "../../Screens/LotesCompraList/LoteCompraRatear";
 import {show as oferecerModalShow} from "../../Screens/LotesVendaList/LotesVendaRatear";
 import "./LoteCard.css";
-import jeans from "../../Assets/Images/calcabigjeans.jpg";
+import jeans1 from "../../Assets/Images/jeans.jpg";
 import lacoste from "../../Assets/Images/lacoste.jpg";
+import xiaomi from '../../Assets/Images/power_bank.jpg';
+import rolex from '../../Assets/Images/watch.jpg';
+import diesel from '../../Assets/Images/jacket.jfif';
+import adidas from '../../Assets/Images/tenis.jfif';
+import placas from '../../Assets/Images/placas.jfif';
+
 
 export default class LoteCard extends Component {
     constructor(props) {
@@ -16,10 +22,25 @@ export default class LoteCard extends Component {
     getImage = () => {
         let lote = this.props.lote;
         if (lote.product.name === "Calça Jeans") {
-            console.log(jeans);
-            return jeans
+            console.log(jeans1);
+            return jeans1
         } else if (lote.product.name === "Camisa Polo") {
             return lacoste;
+        }
+          else if (lote.product.name == "Relógio de ouro rolex") {
+              return rolex;
+          }
+          else if (lote.product.name == "Jaquetas") {
+            return diesel;
+        }
+          else if (lote.product.name == "Power Bank") {
+            return xiaomi;
+        }
+          else if (lote.product.name == "Tênis corrida") {
+            return adidas;
+        }
+          else if (lote.product.name == "Placas eletrônicas") {
+            return placas;
         }
     }
 
@@ -39,7 +60,7 @@ export default class LoteCard extends Component {
         let difference = Math.floor((closingDate - today)/(1000 * 3600 * 24));
         if (difference > 0) {return `${difference} dias`}
         else if (difference === 0) {return "Hoje"}
-        return "Fechado"; 
+        return "Fechado";
     }
 
     render() {
@@ -77,8 +98,9 @@ export default class LoteCard extends Component {
                                 )
                             })
                         }
-                        {this.props.lote.ownedQuantity && this.props.lote.ownedQuantity > 0 &&
-                            <div>Possuo {this.props.lote.ownedQuantity} unidades</div>
+                        { this.props.lote.ownedQuantity && 
+                          (this.props.lote.ownedQuantity > 0) &&
+                            <div className={'owned'}>Possuo {this.props.lote.ownedQuantity} unidades</div>
                         }
                     </div>
                 </div>
